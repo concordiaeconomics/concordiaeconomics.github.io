@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<title>Concordia RePEc Generator</title>
+<link rel="stylesheet" href="econ.css">
+<script type="text/javascript">
+<!--
+
+// This is the check script
+
+function checkit()
+{
+	// In textstring I gather the data that are finally written to the textarea.
+
+	var textstring = 'Template-Type: ReDIF-Paper 1.0\n';
+
+	// First of all, have all the text boxes been filled in?
+	// This part is treated in the normal page.
+	// I put all boxes and their values in textstring
+
+	for (i=0;i<38;i++) {
+		var box = document.forms['example'].elements[i];
+		if (box.value) {
+		if (i==32)
+		{
+		   textstring += box.name + ': ' + box.value + ' pages\n';
+		   }
+		   else
+		   {
+		   textstring += box.name + ': ' + box.value + '\n';
+		}}
+	}
+
+	user_input = '';
+	for (i=0;i<document.forms['example'].format.length;i++) {
+		if (document.forms['example'].format[i].checked) {
+			user_input = document.forms['example'].format[i].value;
+		}
+	}
+	textstring += 'File-Format: ' + user_input + '\n';
+
+	textstring += 'Number: \n';
+	textstring += 'Handle: RePEc:crd:wpaper:\n';
+
+	// Write textstring to the textarea.
+
+	document.forms['example'].output.value = textstring;
+}
+// -->
+</script>
+<style type="text/css">
+td[colspan] {
+	text-align: center;
+}
+</style>
+
+
+</head>
+<body>
+
+<H1>Form for submitting working papers</H1>
+
+RePEc is quite picky about the format of the information that it receives:
+The text file for a working paper has to have certain fields, and each
+field has a particular "name". This page is designed to make the process of
+generating a RePEc entry somewhat less painful.
+
+<p>
+
+Fill out as much information as you care to provide. Blank fields will be
+ignored. When you're done, email the results below to Paul Gomme. He will,
+then, assign your paper a number and send a PDF file containing a cover
+page that you can attach to your original working paper. There is no need
+to inform Paul Gomme of revisions to your working paper, unless you need to
+change your RePEc entry.
+
+<p>
+
+<form name="example" action="#" onsubmit="checkit(); return false">
+<table class="form">
+
+<tr><td><H2>First Author</H2></td></tr>
+
+<tr>
+<td>Name</td>
+<td><input name="Author-Name" /></td>
+</tr>
+
+<tr>
+<td>Email</td>
+<td><input name="Author-Email" /></td>
+</tr>
+
+<tr>
+<td>Homepage (URL, including http)</td>
+<td><input name="Author-Homepage" /></td>
+</tr>
+
+<tr>
+<td>Affiliation(s)</td>
+<td><textarea cols="60" rows="1" name="Author-Workplace-Name" />
+Concordia University</textarea></td>
+</tr>
+
+<tr>
+<td>Homepage for primary affiliation (URL, including http)</td>
+<td><textarea cols="60" rows="1" name="Author-Workplace-Homepage" />
+http://economics.concordia.ca/</textarea></td>
+</tr>
+
+
+
+<tr><td><H2>Second Author</H2></td></tr>
+
+<tr>
+<td>Name</td>
+
+<td><input name="Author-Name" /></td>
+</tr>
+
+<tr>
+<td>Email</td>
+
+<td><input name="Author-Email" /></td>
+</tr>
+
+<tr>
+<td>Homepage (URL, including http)</td>
+
+<td><input name="Author-Homepage" /></td>
+</tr>
+
+<tr>
+<td>Affiliation(s)</td>
+
+<td><textarea cols="60" rows="1" name="Author-Workplace-Name" />
+</textarea></td>
+</tr>
+
+<tr>
+<td>Homepage for primary affiliation (URL, including http)</td>
+
+<td><textarea cols="60" rows="1" name="Author-Workplace-Homepage" />
+</textarea></td>
+</tr>
+
+
+
+
+<tr><td><H2>Third Author</H2></td></tr>
+
+<tr>
+<td>Name</td>
+
+<td><input name="Author-Name" /></td>
+</tr>
+
+<tr>
+<td>Email</td>
+
+<td><input name="Author-Email" /></td>
+</tr>
+
+<tr>
+<td>Homepage (URL, including http)</td>
+
+<td><input name="Author-Homepage" /></td>
+</tr>
+
+<tr>
+<td>Affiliation(s)</td>
+
+<td><textarea cols="60" rows="1" name="Author-Workplace-Name" />
+</textarea></td>
+</tr>
+
+<tr>
+<td>Homepage for primary affiliation (URL, including http)</td>
+
+<td><textarea cols="60" rows="1" name="Author-Workplace-Homepage" />
+</textarea></td>
+</tr>
+
+
+
+
+<tr><td><H2>Fourth Author</H2></td></tr>
+
+<tr>
+<td>Name</td>
+
+<td><input name="Author-Name" /></td>
+</tr>
+
+<tr>
+<td>Email</td>
+
+<td><input name="Author-Email" /></td>
+</tr>
+
+<tr>
+<td>Homepage (URL, including http)</td>
+
+<td><input name="Author-Homepage" /></td>
+</tr>
+
+<tr>
+<td>Affiliation(s)</td>
+
+<td><textarea cols="60" rows="1" name="Author-Workplace-Name" />
+</textarea></td>
+</tr>
+
+<tr>
+<td>Homepage for primary affiliation (URL, including http)</td>
+
+<td><textarea cols="60" rows="1" name="Author-Workplace-Homepage" />
+</textarea></td>
+</tr>
+
+
+
+
+<tr><td><H2>Fifth Author</H2></td></tr>
+
+<tr>
+<td>Name</td>
+
+<td><input name="Author-Name" /></td>
+</tr>
+
+<tr>
+<td>Email</td>
+
+<td><input name="Author-Email" /></td>
+</tr>
+
+<tr>
+<td>Homepage (URL, including http)</td>
+
+<td><input name="Author-Homepage" /></td>
+</tr>
+
+<tr>
+<td>Affiliation(s)</td>
+
+<td><textarea cols="60" rows="1" name="Author-Workplace-Name" />
+</textarea></td>
+</tr>
+
+<tr>
+<td>Homepage for primary affiliation (URL, including http)</td>
+
+<td><textarea cols="60" rows="1" name="Author-Workplace-Homepage" />
+</textarea></td>
+</tr>
+
+
+
+
+<tr><td><H2>Sixth Author</H2></td></tr>
+
+<tr>
+<td>Name</td>
+
+<td><input name="Author-Name" /></td>
+</tr>
+
+<tr>
+<td>Email</td>
+
+<td><input name="Author-Email" /></td>
+</tr>
+
+<tr>
+<td>Homepage (URL, including http)</td>
+
+<td><input name="Author-Homepage" /></td>
+</tr>
+
+<tr>
+<td>Affiliation(s)</td>
+
+<td><textarea cols="60" rows="1" name="Author-Workplace-Name" />
+</textarea></td>
+</tr>
+
+<tr>
+<td>Homepage for primary affiliation (URL, including http)</td>
+
+<td><textarea cols="60" rows="1" name="Author-Workplace-Homepage" />
+</textarea></td>
+</tr>
+
+
+
+
+<tr><td><H2>Paper Details</H2></td></tr>
+
+<tr>
+<td>Title</td>
+
+<td><textarea cols="60" rows="3" name="Title" />
+</textarea></td>
+</tr>
+
+<tr>
+<td>Abstract</td>
+
+<td><textarea cols="90" rows="10" name="Abstract" />
+</textarea></td>
+</tr>
+
+<tr>
+<td>Number of pages</td>
+
+<td><input name="Length" /></td>
+</tr>
+
+<tr>
+<td>Creation date (yyyy-mm-dd or yyyy-mm)</td>
+
+<td><input name="Creation-Date" /></td>
+</tr>
+
+<tr>
+<td>Revision date (yyyy-mm-dd or yyyy-mm)</td>
+
+<td><input name="Revision-Date" /></td>
+</tr>
+
+<tr>
+<td>JEL codes</td>
+
+<td><textarea cols="90" rows="1" name="Classification-JEL" />
+</textarea></td>
+</tr>
+
+<tr>
+<td>Keywords</td>
+
+<td><textarea cols="90" rows="1" name="Keywords" />
+</textarea></td>
+</tr>
+
+<tr>
+<td>File location (full URL starting with http)</td>
+
+<td><textarea cols="90" rows="1" name="File-URL" />
+</textarea></td>
+</tr>
+
+<tr>
+<td>File format</td>
+<td><input type="radio" name="format" value="Application/pdf" />PDF (aka Adobe)<br />
+<input type="radio" name="format" value="Application/ps" />Postscript<br />
+<input type="radio" name="format" value="Application/word" />Microsoft word<br />
+<input type="radio" name="format" value="Application/other" />Other<br />
+</td></tr>
+<tr>
+
+
+
+
+<tr><td colspan="2"><input type="submit" value="Submit form" /><br />
+<input type="reset" /></td></tr>
+<tr><td colspan="2"><textarea cols="80" rows="30" name="output">Your input will be printed here. Send the results via email to Paul Gomme.</textarea></td></tr>
+</table>
+</form>
+
+
+</body>
+
+<HR>
+
+<ADDRESS>
+
+Paul Gomme | 
+Revised December 11, 2008
+</ADDRESS>
+
+
+
+</html>
