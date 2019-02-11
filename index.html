@@ -4,42 +4,6 @@
 <head>
 <title>Concordia RePEc Generator</title>
 <link rel="stylesheet" href="econ.css">
-<script type="text/javascript">
-<!--
-// This is the check script
-function checkit()
-{
-	// In textstring I gather the data that are finally written to the textarea.
-	var textstring = 'Template-Type: ReDIF-Paper 1.0\n';
-	// First of all, have all the text boxes been filled in?
-	// This part is treated in the normal page.
-	// I put all boxes and their values in textstring
-	for (i=0;i<38;i++) {
-		var box = document.forms['example'].elements[i];
-		if (box.value) {
-		if (i==32)
-		{
-		   textstring += box.name + ': ' + box.value + ' pages\n';
-		   }
-		   else
-		   {
-		   textstring += box.name + ': ' + box.value + '\n';
-		}}
-	}
-	user_input = '';
-	for (i=0;i<document.forms['example'].format.length;i++) {
-		if (document.forms['example'].format[i].checked) {
-			user_input = document.forms['example'].format[i].value;
-		}
-	}
-	textstring += 'File-Format: ' + user_input + '\n';
-	textstring += 'Number: \n';
-	textstring += 'Handle: RePEc:crd:wpaper:\n';
-	// Write textstring to the textarea.
-	document.forms['example'].output.value = textstring;
-}
-// -->
-</script>
 <style type="text/css">
 td[colspan] {
 	text-align: center;
@@ -58,10 +22,10 @@ field has a particular "name". This page is designed to make the process of
 generating a RePEc entry somewhat less painful.</p>
 
 <p>Fill out as much information as you care to provide. Blank fields will be
-ignored. When you're done, email the results below to Paul Gomme. He will,
-then, assign your paper a number and send a PDF file containing a cover
+	ignored. When you're done, click the <b>Submit</b> button below. Your working paper information will be forwarded to the series administrator
+	The administrator will assign your paper a number and send a PDF file containing a cover
 page that you can attach to your original working paper. There is no need
-to inform Paul Gomme of revisions to your working paper, unless you need to
+to inform the administrator of revisions to your working paper, unless you need to
 change your RePEc entry.</p>
 
 <form accept-charset="UTF-8"
@@ -69,7 +33,7 @@ change your RePEc entry.</p>
       enctype="multipart/form-data"
       method="POST">
 
-<table class="form">
+<table align="right" class="form">
 
 <tr><td><H2>First Author</H2></td></tr>
 
