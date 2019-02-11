@@ -4,51 +4,6 @@
 <head>
 <title>Concordia RePEc Generator</title>
 <link rel="stylesheet" href="econ.css">
-<script type="text/javascript">
-<!--
-
-// This is the check script
-
-function checkit()
-{
-	// In textstring I gather the data that are finally written to the textarea.
-
-	var textstring = 'Template-Type: ReDIF-Paper 1.0\n';
-
-	// First of all, have all the text boxes been filled in?
-	// This part is treated in the normal page.
-	// I put all boxes and their values in textstring
-
-	for (i=0;i<38;i++) {
-		var box = document.forms['example'].elements[i];
-		if (box.value) {
-		if (i==32)
-		{
-		   textstring += box.name + ': ' + box.value + ' pages\n';
-		   }
-		   else
-		   {
-		   textstring += box.name + ': ' + box.value + '\n';
-		}}
-	}
-
-	user_input = '';
-	for (i=0;i<document.forms['example'].format.length;i++) {
-		if (document.forms['example'].format[i].checked) {
-			user_input = document.forms['example'].format[i].value;
-		}
-	}
-	textstring += 'File-Format: ' + user_input + '\n';
-
-	textstring += 'Number: \n';
-	textstring += 'Handle: RePEc:crd:wpaper:\n';
-
-	// Write textstring to the textarea.
-
-	document.forms['example'].output.value = textstring;
-}
-// -->
-</script>
 <style type="text/css">
 td[colspan] {
 	text-align: center;
@@ -78,7 +33,7 @@ change your RePEc entry.
 <p>
 
 <form name="example" action="#" onsubmit="checkit(); return false">
-<table class="form">
+<table align="right" class="form">
 
 <tr><td><H2>First Author</H2></td></tr>
 
